@@ -11,3 +11,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+## alias ##
+
+# general
+alias doc='cd ~/Documents/'
+alias ll='ls -la'
+alias cc='clear'
+
+# git
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+
+# TMUX
+alias mmux='tmux new -s'
+alias tls='tmux list-session'
+alias hugg='tmux attach -t'
+alias shoot='tmux kill-session -t'
+
+## environment ##
+
+# Source environment variables
+if [ -f ~/.environment ]; then
+    . ~/.environment
+fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
